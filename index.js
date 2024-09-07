@@ -15,9 +15,9 @@ setInterval(function () {
 }, 300);
 
 document.getElementById("btn").onclick = function () {
-  var textRaw = document.getElementById("textInput").value;
-  textEdited = textRaw.slice(0, 141);
-  var textLength = textRaw.length;
+  let textRaw = document.getElementById("textInput").value;
+  let textEdited = textRaw.slice(0, 141);
+  let textLength = textRaw.length;
   if (textLength >= 140) {
     alert("Text cant be longer than 140 characters!!!");
   } else {
