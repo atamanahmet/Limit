@@ -1,10 +1,9 @@
 setInterval(function () {
   var textInput = document.getElementById("textInput").value;
-  var charLength = textInput.length;
   var redTextInput = "";
-  document.getElementById("charCount").textContent = `${charLength} / 140`;
+  document.getElementById("charCount").textContent = `${textInput.length} / 140`;
 
-  if (charLength >= 140) {
+  if (textInput.length >= 140) {
     document.getElementById("charCount").style.color = "red";
     textInput = textInput.slice(0, 140);
     document.getElementById("textInput").style.color = "red";
@@ -16,9 +15,8 @@ setInterval(function () {
 
 document.getElementById("btn").onclick = function () {
   let textRaw = document.getElementById("textInput").value;
-  let textLength = textRaw.length;
   let textEdited = textRaw.slice(0, 140);
-  if (textLength >= 140) {
+  if (textRaw.length >= 140) {
     alert("Text can't be more than 140 characters. Your text reduced to 140 Characters");
      console.log(textEdited);
   } else {
